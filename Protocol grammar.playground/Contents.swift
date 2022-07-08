@@ -271,3 +271,33 @@ print(big.isON)
 
 //
 
+protocol SomeProtocol1 {
+    init(num: Int)
+}
+
+class SomeClass: SomeProtocol1 {   // 생성자 프로토콜 채택시 클래스는 required 붙여야함
+    required init(num: Int) {
+        
+    }
+}
+
+class Somesubclass: SomeClass {. // 하위 클래스에서 생성자 구현 안하면 필수생성자는 자동 상속
+    
+}
+
+
+//
+
+protocol AProtocol {
+    init()
+}
+
+class ASuperClass {
+    init()
+}
+
+class ASubClass: ASuperClass, AProtocol {
+    required override init()
+}
+
+// 프로토콜 채택으로 required + 재정의 키워드 override
