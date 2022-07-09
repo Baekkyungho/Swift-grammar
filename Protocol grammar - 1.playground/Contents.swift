@@ -332,9 +332,7 @@ sphone.blueOn()     // 블루투스 켜기
 sphone.blueOff()    // 블루투스 끄기
 
 
-
-
-
+//테스트
 
 
 
